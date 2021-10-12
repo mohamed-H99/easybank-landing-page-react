@@ -1,0 +1,51 @@
+@font-face {
+  font-family: "Public Sans";
+  src: url("../fonts/PublicSans-Light.ttf");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Public Sans";
+  src: url("../fonts/PublicSans-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Public Sans";
+  src: url("../fonts/PublicSans-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+:root {
+  --base-ff: "Public Sans", sans-serif;
+  --base-fw: 300;
+  --base-fs: 18px;
+
+  --clr-dark-blue: hsl(233, 26%, 24%);
+  --clr-lime-green: hsl(136, 65%, 51%);
+  --clr-bright-cyan: hsl(192, 70%, 51%);
+  --clr-grayish-blue: hsl(233, 8%, 62%);
+  --clr-light-grayish-blue: hsl(220, 16%, 96%);
+  --clr-very-light: hsl(0, 0%, 98%);
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-black: hsl(0, 0%, 0%);
+
+  /* screen sizes:
+    sm: 576
+    md: 768
+    lg: 992px
+    xl: 1200
+  */
+}
+
+body {
+  font-family: var(--base-ff);
+  font-size: var(--base-fs);
+  font-weight: var(--base-fw);
+  background-color: var(--clr-white);
+  color: var(--clr-dark-blue);
+  line-height: 1.5;
+}
