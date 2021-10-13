@@ -1,6 +1,6 @@
 import React from "react";
-// import {} from "./StyledElements";
+import { Header } from "./StyledElements";
 
 export default function Error() {
-  return <div></div>;
+  return <Header></Header>;
 }

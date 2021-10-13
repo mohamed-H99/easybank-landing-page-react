@@ -48,4 +48,5 @@ body {
   background-color: var(--clr-white);
   color: var(--clr-dark-blue);
   line-height: 1.5;
+  overflow-x: hidden;
 }

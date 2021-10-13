@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import Home from "./views/Home";
 import Error from "./views/Error";
+import AppBar from "./components/AppBar";
+import AppFooter from "./components/AppFooter";
 import { Switch, Route, Redirect } from "react-router-dom";
 import db from "./data.json";
 
@@ -14,6 +16,7 @@ function App() {
 
   return (
     <>
+      <AppBar />
       <Switch>
         <Route path="/" exact>
           <Home data={state} />
@@ -23,6 +26,7 @@ function App() {
         </Route>
         <Redirect to="/404" />
       </Switch>
+      <AppFooter />
     </>
   );
 }

@@ -1,4 +1,7 @@
 {
+  "introImageDesktop": "bg-intro-desktop.svg",
+  "introImageMobile": "bg-intro-mobile.svg",
+  "mockups": "image-mockups.png",
   "services": [
     {
       "id": "1",

@@ -6,6 +6,12 @@ import {
   SectionSubtitle,
 } from "../../components/Common/StyledElements";
 import {
+  HeroWrapper,
+  HeroContent,
+  HeroContentTitle,
+  HeroContentSubtitle,
+  HeroImageWrapper,
+  HeroImage,
   ServiceCardsWrapper,
   ServiceCard,
   ServiceCardImage,
@@ -24,14 +30,28 @@ export default function Home({ data }) {
   const [localImages, setLocalImages] = useState({});
 
   useEffect(() => {
+    const bgDesktop =
+      data?.introImageDesktop &&
+      require(`../../assets/images/${data.introImageDesktop}`).default;
+    const bgMobile =
+      data?.introImageMobile &&
+      require(`../../assets/images/${data.introImageMobile}`).default;
+
+    const mockups =
+      data?.mockups && require(`../../assets/images/${data.mockups}`).default;
+
     const serImgs = data?.services?.map(
       (ser) => require(`../../assets/images/${ser.image}`)?.default
     );
     const artImgs = data?.articles?.map(
       (art) => require(`../../assets/images/${art.image}`)?.default
     );
+
     setLocalImages((prev) => ({
       ...prev,
+      mockups,
+      bgDesktop,
+      bgMobile,
       services: serImgs,
       articles: artImgs,
     }));
@@ -39,6 +59,32 @@ export default function Home({ data }) {
 
   return (
     <>
+      <Section style={{ paddingBlock: "0" }}>
+        <HeroWrapper
+          src={{
+            mobile: localImages?.bgMobile,
+            desktop: localImages?.bgDesktop,
+          }}
+        >
+          <HeroImageWrapper>
+            {/* <HeroImage src={localImages?.bgMobile} /> */}
+            <HeroImage src={localImages?.mockups} />
+            {/* <HeroImage src={localImages?.bgDesktop} /> */}
+          </HeroImageWrapper>
+          <Container>
+            <HeroContent>
+              <HeroContentTitle>
+                {"Next generation digital banking"}
+              </HeroContentTitle>
+              <HeroContentSubtitle>
+                {
+                  "Take your financial life online. Your Easybank account will be a one-stop-shop for spending, saving, budgeting, investing, and much more."
+                }
+              </HeroContentSubtitle>
+            </HeroContent>
+          </Container>
+        </HeroWrapper>
+      </Section>
       <Section grayish>
         <Container text="center">
           <SectionTitle>{"Why choose EasyBank?"}</SectionTitle>
