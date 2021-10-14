@@ -10,13 +10,13 @@ const HeroWrapper = styled.div`
   background-position: 100% 0%;
   background-size: 100%;
   ${css`
-  @media (min-width: 576px) {
-    background-image: url(${(props) => props.src.desktop});
-    background-size: 50%;
-    background-position: 100% 50%;
-    grid-template-columns: unset;
-    grid-template-areas: 'content image';
-  }
+    @media (min-width: 576px) {
+      background-image: url(${(props) => props.src.desktop});
+      background-size: 50%;
+      background-position: 100% 50%;
+      grid-template-columns: unset;
+      grid-template-areas: "content image";
+    }
   `}
 `;
 
@@ -29,10 +29,10 @@ const HeroContent = styled.div`
   grid-area: content;
 
   ${css`
-  @media (min-width: 576px) {
-    width: 70%;
-    text-align: start;
-  }
+    @media (min-width: 576px) {
+      width: 70%;
+      text-align: start;
+    }
   `}
 `;
 
@@ -42,9 +42,9 @@ const HeroContentTitle = styled.h1`
   margin-block: 0;
 
   ${css`
-  @media (min-width: 576px) {
-    line-height: 1.2;
-  }
+    @media (min-width: 576px) {
+      line-height: 1.2;
+    }
   `}
 `;
 
@@ -58,9 +58,9 @@ const HeroImageWrapper = styled.div`
   grid-area: image;
 
   ${css`
-  @media (min-width: 576px) {
-    transform: scale(1.5);
-  }
+    @media (min-width: 576px) {
+      transform: scale(1.5);
+    }
   `}
 `;
 
@@ -83,6 +83,12 @@ const ServiceCard = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  ${css`
+    @media (min-width: 576px) {
+      align-items: flex-start;
+    }
+  `}
 `;
 
 const ServiceCardImage = styled.img`

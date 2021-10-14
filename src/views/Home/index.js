@@ -67,9 +67,7 @@ export default function Home({ data }) {
           }}
         >
           <HeroImageWrapper>
-            {/* <HeroImage src={localImages?.bgMobile} /> */}
             <HeroImage src={localImages?.mockups} />
-            {/* <HeroImage src={localImages?.bgDesktop} /> */}
           </HeroImageWrapper>
           <Container>
             <HeroContent>
@@ -86,7 +84,7 @@ export default function Home({ data }) {
         </HeroWrapper>
       </Section>
       <Section grayish>
-        <Container text="center">
+        <Container>
           <SectionTitle>{"Why choose EasyBank?"}</SectionTitle>
           <SectionSubtitle>
             {
@@ -111,7 +109,7 @@ export default function Home({ data }) {
       </Section>
 
       <Section light>
-        <Container text="center">
+        <Container>
           <SectionTitle>{"Latest Articles"}</SectionTitle>
           <ArticleCardsWrapper>
             {data?.articles?.map((art, idx) => (

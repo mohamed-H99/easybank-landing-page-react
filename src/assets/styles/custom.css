@@ -27,6 +27,11 @@
   --clr-dark-blue: hsl(233, 26%, 24%);
   --clr-lime-green: hsl(136, 65%, 51%);
   --clr-bright-cyan: hsl(192, 70%, 51%);
+  --clr-gradient: linear-gradient(
+    to right,
+    var(--clr-lime-green),
+    var(--clr-bright-cyan)
+  );
   --clr-grayish-blue: hsl(233, 8%, 62%);
   --clr-light-grayish-blue: hsl(220, 16%, 96%);
   --clr-very-light: hsl(0, 0%, 98%);

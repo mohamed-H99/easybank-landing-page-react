@@ -2,6 +2,7 @@
   "introImageDesktop": "bg-intro-desktop.svg",
   "introImageMobile": "bg-intro-mobile.svg",
   "mockups": "image-mockups.png",
+  "logo": "logo.svg",
   "services": [
     {
       "id": "1",
