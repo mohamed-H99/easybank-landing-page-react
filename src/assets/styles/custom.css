@@ -38,6 +38,9 @@
   --clr-white: hsl(0, 0%, 100%);
   --clr-black: hsl(0, 0%, 0%);
 
+  --delay: 0.25s;
+  --rad: 0.25rem;
+
   /* screen sizes:
     sm: 576
     md: 768
